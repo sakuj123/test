@@ -1,0 +1,228 @@
+*{
+  box-sizing: border-box; 
+  /* 테두리까지 포함해주세요 라는 명령어 */
+  /* 적용이 안되면 상자의 border의 굵기를 늘리면 밖으로 커진다. */
+}
+
+
+
+body{
+  margin: 0 auto;
+  font-family: 'Noto{ Sans KR', sans-serif;
+}
+
+a{
+  all: unset; /* a의 기본태그를 없애줌 */
+}
+
+a:link, a:visited{ /*링크에 방문한 적이 없을 때 , a:visited -> 링크에 방문한 적이 있을 때*/
+  text-decoration: none; /* 초기화 */
+  color: #8e8d8d;
+
+}
+a:active, a:hover{ /* a를 클릭했을 때, hover -> 마우스 포인트가 닿았을 때 */
+  text-decoration: none;
+  color: #8e8d8d;
+}
+
+
+
+.inner{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem; /* 기본크기에서 2배만큼 크게해주세요 */
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: fixed; /* 화면 고정 */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* z축을 1000만큼 늘리기 */
+
+}
+
+.head-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* 양쪽 정렬 */
+  align-items: center; /* 박스를 기준으로 세로 중앙 */
+}
+
+.head-container .head-brand{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.head-container .head-logo{
+  font-family: 'Hi Melody', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #8e8d8d;
+}
+
+.head-container .head-brand a:hover{
+  /* cursor: wait; 커서 돌아가는 거 */
+  cursor: pointer ; 
+  color: #2ab1ff;
+}
+
+section{
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+.main{
+  height: 360px;
+  background-image: url(/img/img/school.jpg);
+  background-position: 0 30%;
+  background-size: cover; /* 배경 이미지 크기 설정(지정한 요소를 다 덮음) */
+  background-repeat: no-repeat; /* 반복 여부와 반복방향을 정함(반복 여부X) */
+  margin-top: 60px;
+  z-index: 1;
+}
+
+.main-container{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(67, 102, 135);
+  opacity: 0.8;
+  z-index: 2;
+
+}
+
+.title-container{
+  padding: 100px 0;
+  /* position: absolute;
+  top: 50px; /* 50%만큼 밀어주세요
+  transform: translateY(-50%); */
+
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.8rem; /* 여백크기 */
+}
+
+.message{
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.skill-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.skill{
+  width: 25%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem 0.5rem 1rem;
+  box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+}
+
+.skill-icon{
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.medal-style{
+  color: gold;
+}
+
+.skill-title{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 0.2rem;
+}
+
+.skill-name{
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.skill-usage{
+  font-size: 0.7rem;
+}
+
+.rodmap-container{
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.rodmap-title-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadmap-title{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.slide-prev{
+  font-size: 2rem;
+  color: rgb(67, 102, 135);
+  cursor: pointer;
+}
+
+.slide-next{
+  font-size: 2rem;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.img-icon{
+  width: 2rem;
+  margin: 0 10px;
+}
+
+.vidio-icon{
+  font-size: 2rem; /* 가지고 온 거는 font-size로 */
+  margin: 0 10px;
+  color: gray;
+}
+
+.ins-icon{
+  font-size: 2rem;
+  margin: 0 10px;
+  color: rgb(239, 155, 183);
+}
+
+
+
+
+
+
+@media screen and (min-width:1100px)/* 최소 크기 530px이하까지 */{
+  .inner{
+   max-width: 1100px;
+  }
+}
+
+@media screen and (max-width:500px)/* 최대 크기 500px이하까지 */{
+  .skill-container, .title{
+   display: none;
+  }
+
+  
+}
+
